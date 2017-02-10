@@ -7,6 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E330643F1E34E29B00CA6939 /* AppConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = E330643E1E34E29B00CA6939 /* AppConst.swift */; };
+		E3485E9E1E41DFDC00555D49 /* PdfCreateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3485E9D1E41DFDC00555D49 /* PdfCreateManager.swift */; };
+		E37D51FC1E36075100512394 /* icon_128x128.png in Resources */ = {isa = PBXBuildFile; fileRef = E37D51F21E36075100512394 /* icon_128x128.png */; };
+		E37D51FD1E36075100512394 /* icon_128x128@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E37D51F31E36075100512394 /* icon_128x128@2x.png */; };
+		E37D51FE1E36075100512394 /* icon_16x16.png in Resources */ = {isa = PBXBuildFile; fileRef = E37D51F41E36075100512394 /* icon_16x16.png */; };
+		E37D51FF1E36075100512394 /* icon_16x16@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E37D51F51E36075100512394 /* icon_16x16@2x.png */; };
+		E37D52001E36075100512394 /* icon_256x256.png in Resources */ = {isa = PBXBuildFile; fileRef = E37D51F61E36075100512394 /* icon_256x256.png */; };
+		E37D52011E36075100512394 /* icon_256x256@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E37D51F71E36075100512394 /* icon_256x256@2x.png */; };
+		E37D52021E36075100512394 /* icon_32x32.png in Resources */ = {isa = PBXBuildFile; fileRef = E37D51F81E36075100512394 /* icon_32x32.png */; };
+		E37D52031E36075100512394 /* icon_32x32@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E37D51F91E36075100512394 /* icon_32x32@2x.png */; };
+		E37D52041E36075100512394 /* icon_512x512.png in Resources */ = {isa = PBXBuildFile; fileRef = E37D51FA1E36075100512394 /* icon_512x512.png */; };
+		E37D52051E36075100512394 /* icon_512x512@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E37D51FB1E36075100512394 /* icon_512x512@2x.png */; };
+		E37D52071E360BAA00512394 /* PdfCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37D52061E360BAA00512394 /* PdfCreator.swift */; };
+		E38A211A1E47582400BAD8F2 /* MetaDataTextSubView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38A21191E47582400BAD8F2 /* MetaDataTextSubView.swift */; };
+		E38A211C1E47583F00BAD8F2 /* MetaDataSelectSubView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38A211B1E47583F00BAD8F2 /* MetaDataSelectSubView.swift */; };
 		E3A400681DF9AFF8002376CB /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3A400671DF9AFF8002376CB /* Cocoa.framework */; };
 		E3CA94201DF83843004501DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3CA941F1DF83843004501DD /* AppDelegate.swift */; };
 		E3CA94221DF83843004501DD /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3CA94211DF83843004501DD /* MainViewController.swift */; };
@@ -15,9 +30,25 @@
 		E3CA94301DF839AD004501DD /* DropContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3CA942F1DF839AD004501DD /* DropContentView.swift */; };
 		E3CA94321DF8582E004501DD /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3CA94311DF8582E004501DD /* MainViewModel.swift */; };
 		E3CA94351DF97DFD004501DD /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E3CA94341DF97DFD004501DD /* background.jpg */; };
+		E3ECAD0F1E4B5BC4003714A2 /* MetaDataSubView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3ECAD0E1E4B5BC4003714A2 /* MetaDataSubView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E330643E1E34E29B00CA6939 /* AppConst.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConst.swift; sourceTree = "<group>"; };
+		E3485E9D1E41DFDC00555D49 /* PdfCreateManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PdfCreateManager.swift; sourceTree = "<group>"; };
+		E37D51F21E36075100512394 /* icon_128x128.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_128x128.png; sourceTree = "<group>"; };
+		E37D51F31E36075100512394 /* icon_128x128@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_128x128@2x.png"; sourceTree = "<group>"; };
+		E37D51F41E36075100512394 /* icon_16x16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_16x16.png; sourceTree = "<group>"; };
+		E37D51F51E36075100512394 /* icon_16x16@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_16x16@2x.png"; sourceTree = "<group>"; };
+		E37D51F61E36075100512394 /* icon_256x256.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_256x256.png; sourceTree = "<group>"; };
+		E37D51F71E36075100512394 /* icon_256x256@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_256x256@2x.png"; sourceTree = "<group>"; };
+		E37D51F81E36075100512394 /* icon_32x32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_32x32.png; sourceTree = "<group>"; };
+		E37D51F91E36075100512394 /* icon_32x32@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_32x32@2x.png"; sourceTree = "<group>"; };
+		E37D51FA1E36075100512394 /* icon_512x512.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_512x512.png; sourceTree = "<group>"; };
+		E37D51FB1E36075100512394 /* icon_512x512@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_512x512@2x.png"; sourceTree = "<group>"; };
+		E37D52061E360BAA00512394 /* PdfCreator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PdfCreator.swift; sourceTree = "<group>"; };
+		E38A21191E47582400BAD8F2 /* MetaDataTextSubView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetaDataTextSubView.swift; sourceTree = "<group>"; };
+		E38A211B1E47583F00BAD8F2 /* MetaDataSelectSubView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetaDataSelectSubView.swift; sourceTree = "<group>"; };
 		E3A400671DF9AFF8002376CB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		E3CA941C1DF83843004501DD /* kantanPDF.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kantanPDF.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3CA941F1DF83843004501DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -28,6 +59,7 @@
 		E3CA942F1DF839AD004501DD /* DropContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropContentView.swift; sourceTree = "<group>"; };
 		E3CA94311DF8582E004501DD /* MainViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		E3CA94341DF97DFD004501DD /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background.jpg; sourceTree = "<group>"; };
+		E3ECAD0E1E4B5BC4003714A2 /* MetaDataSubView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetaDataSubView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +74,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E37D51F11E36075100512394 /* appIcon */ = {
+			isa = PBXGroup;
+			children = (
+				E37D51F21E36075100512394 /* icon_128x128.png */,
+				E37D51F31E36075100512394 /* icon_128x128@2x.png */,
+				E37D51F41E36075100512394 /* icon_16x16.png */,
+				E37D51F51E36075100512394 /* icon_16x16@2x.png */,
+				E37D51F61E36075100512394 /* icon_256x256.png */,
+				E37D51F71E36075100512394 /* icon_256x256@2x.png */,
+				E37D51F81E36075100512394 /* icon_32x32.png */,
+				E37D51F91E36075100512394 /* icon_32x32@2x.png */,
+				E37D51FA1E36075100512394 /* icon_512x512.png */,
+				E37D51FB1E36075100512394 /* icon_512x512@2x.png */,
+			);
+			name = appIcon;
+			path = kantanPDF/appIcon;
+			sourceTree = "<group>";
+		};
 		E3A400661DF9AFF8002376CB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -53,6 +103,7 @@
 		E3CA94131DF83843004501DD = {
 			isa = PBXGroup;
 			children = (
+				E37D51F11E36075100512394 /* appIcon */,
 				E3CA94341DF97DFD004501DD /* background.jpg */,
 				E3CA941E1DF83843004501DD /* kantanPDF */,
 				E3CA941D1DF83843004501DD /* Products */,
@@ -72,11 +123,17 @@
 			isa = PBXGroup;
 			children = (
 				E3CA941F1DF83843004501DD /* AppDelegate.swift */,
+				E330643E1E34E29B00CA6939 /* AppConst.swift */,
+				E3485E9D1E41DFDC00555D49 /* PdfCreateManager.swift */,
+				E37D52061E360BAA00512394 /* PdfCreator.swift */,
 				E3CA94331DF85845004501DD /* MainView */,
 				E3CA942E1DF8397B004501DD /* dropContentView */,
 				E3CA94231DF83843004501DD /* Assets.xcassets */,
 				E3CA94251DF83843004501DD /* Main.storyboard */,
 				E3CA94281DF83843004501DD /* Info.plist */,
+				E38A21191E47582400BAD8F2 /* MetaDataTextSubView.swift */,
+				E38A211B1E47583F00BAD8F2 /* MetaDataSelectSubView.swift */,
+				E3ECAD0E1E4B5BC4003714A2 /* MetaDataSubView.swift */,
 			);
 			path = kantanPDF;
 			sourceTree = "<group>";
@@ -125,7 +182,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0810;
-				LastUpgradeCheck = 0810;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "田中智子";
 				TargetAttributes = {
 					E3CA941B1DF83843004501DD = {
@@ -158,9 +215,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E37D51FF1E36075100512394 /* icon_16x16@2x.png in Resources */,
+				E37D51FD1E36075100512394 /* icon_128x128@2x.png in Resources */,
 				E3CA94351DF97DFD004501DD /* background.jpg in Resources */,
+				E37D51FC1E36075100512394 /* icon_128x128.png in Resources */,
+				E37D51FE1E36075100512394 /* icon_16x16.png in Resources */,
+				E37D52001E36075100512394 /* icon_256x256.png in Resources */,
 				E3CA94241DF83843004501DD /* Assets.xcassets in Resources */,
+				E37D52021E36075100512394 /* icon_32x32.png in Resources */,
 				E3CA94271DF83843004501DD /* Main.storyboard in Resources */,
+				E37D52031E36075100512394 /* icon_32x32@2x.png in Resources */,
+				E37D52051E36075100512394 /* icon_512x512@2x.png in Resources */,
+				E37D52011E36075100512394 /* icon_256x256@2x.png in Resources */,
+				E37D52041E36075100512394 /* icon_512x512.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -174,7 +241,13 @@
 				E3CA94301DF839AD004501DD /* DropContentView.swift in Sources */,
 				E3CA94221DF83843004501DD /* MainViewController.swift in Sources */,
 				E3CA94201DF83843004501DD /* AppDelegate.swift in Sources */,
+				E37D52071E360BAA00512394 /* PdfCreator.swift in Sources */,
+				E38A211C1E47583F00BAD8F2 /* MetaDataSelectSubView.swift in Sources */,
+				E3485E9E1E41DFDC00555D49 /* PdfCreateManager.swift in Sources */,
 				E3CA94321DF8582E004501DD /* MainViewModel.swift in Sources */,
+				E330643F1E34E29B00CA6939 /* AppConst.swift in Sources */,
+				E3ECAD0F1E4B5BC4003714A2 /* MetaDataSubView.swift in Sources */,
+				E38A211A1E47582400BAD8F2 /* MetaDataTextSubView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -210,6 +283,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -259,6 +333,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -290,7 +365,7 @@
 				DEVELOPMENT_TEAM = WF9PPK3ZKZ;
 				INFOPLIST_FILE = kantanPDF/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = tokyo.chamsworks.kantanPDF;
+				PRODUCT_BUNDLE_IDENTIFIER = tokyo.boost.kantanPDF;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -304,7 +379,7 @@
 				DEVELOPMENT_TEAM = WF9PPK3ZKZ;
 				INFOPLIST_FILE = kantanPDF/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = tokyo.chamsworks.kantanPDF;
+				PRODUCT_BUNDLE_IDENTIFIER = tokyo.boost.kantanPDF;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
