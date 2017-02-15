@@ -9,7 +9,8 @@
 import Cocoa
 
 protocol PDFCreateManagerDelegate: class{
-    func changDataState(mngData: PDFMetaData)
+    func changDataState(mngData: PdfMngData, exePercent: Int)
+    func pdfConvertEnd()
 }
 
 /// 実行ステータス
@@ -37,7 +38,7 @@ struct PdfMngData {
 
 class PdfCreateManager: NSObject {
     let parallels = 4
-    weak var delegate: PDFCreateManagerDelegate?
+    weak open var delegate: PDFCreateManagerDelegate?
     
     private var isCancel = false
     var cnvertList:Array<Array<PdfMngData>>?
@@ -51,46 +52,55 @@ class PdfCreateManager: NSObject {
         cnvertList = parallelCnvtList(cnverts: cnverts)
         
         let creator = PdfCreator()
+        var cunt = Double(0)
 
         let queue = DispatchQueue.global(qos: .default)
-        for inList in cnvertList! {
-            let queGroup = DispatchGroup()
-            for var mngData in inList {
-                queue.async(group: queGroup) {
-                    print("start " + mngData.metaData.title)
-                    do {
-                        mngData.exeState = ExeState.Executing
-                        DispatchQueue.main.async {
+        queue.async {
+            for inList in self.cnvertList! {
+                let queGroup = DispatchGroup()
+                for var mngData in inList {
+                    queue.async(group: queGroup) {
+                        print("start " + mngData.metaData.title)
+                        do {
+                            mngData.exeState = ExeState.Executing
+                            DispatchQueue.main.async {
+                                self.delegate?.changDataState(mngData: mngData, exePercent: Int(cunt == 0.0 ? 0.0 : (cunt / Double(cnverts.count)) * 100))
+                            }
+                            if self.isCancel {
+                                creator.cancel()
+                            }
                             
-                            
+                            defer {
+                                mngData.exeState = ExeState.Executed
+                                cunt += 1
+                                DispatchQueue.main.async {
+                                    self.delegate?.changDataState(mngData: mngData, exePercent: Int(cunt == 0.0 ? 0.0 : (cunt / Double(cnverts.count)) * 100))
+                                }
+                            }
+                            try creator.createPDFFile(metaData: mngData.metaData)
                         }
-                        if self.isCancel {
-                            creator.cancel()
+                        catch PDFError.NoDirectory {
+                            mngData.exeState = ExeState.Error("NoDirectory")
                         }
-                        try creator.createPDFFile(metaData: mngData.metaData)
-                    }
-                    catch PDFError.NoDirectory {
-                        mngData.exeState = ExeState.Error("NoDirectory")
-                    }
-                    catch PDFError.DirEmpty {
-                        mngData.exeState = ExeState.Error("DirEmpty")
-                    }
-                    catch PDFError.Cancel {
-                        mngData.exeState = ExeState.Error("Cancel")
-                    }
-                    catch PDFError.EtcError(let msg) {
-                        mngData.exeState = ExeState.Error(msg)
-                    }
-                    catch {
-                        mngData.exeState = ExeState.Error("その他のエラー")
-                    }
-                    
-                    DispatchQueue.main.async {
-                        
+                        catch PDFError.DirEmpty {
+                            mngData.exeState = ExeState.Error("DirEmpty")
+                        }
+                        catch PDFError.Cancel {
+                            mngData.exeState = ExeState.Error("Cancel")
+                        }
+                        catch PDFError.EtcError(let msg) {
+                            mngData.exeState = ExeState.Error(msg)
+                        }
+                        catch {
+                            mngData.exeState = ExeState.Error("その他のエラー")
+                        }
                     }
                 }
+                queGroup.wait()
             }
-            queGroup.wait()
+            DispatchQueue.main.async {
+                self.delegate?.pdfConvertEnd()
+            }
         }
     }
 

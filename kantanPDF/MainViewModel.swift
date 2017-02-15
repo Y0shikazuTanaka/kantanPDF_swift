@@ -11,7 +11,14 @@ import Cocoa
 let exclueExtentions = [""]
 let exclueFilenames = [".DS_Store"]
 
+protocol MainViewModelDelegate: class {
+    func pdfMngChangDataState(mngData: PdfMngData, exePercent: Int)
+    func pdfConvertEnd()
+}
+
 class MainViewModel: NSObject, PDFCreateManagerDelegate {
+    weak open var delegate: MainViewModelDelegate?
+    
     var cnvertList:[PdfMngData] = []
     var selectMngDat:[PdfMngData] = []
     let pdfCreateMg = PdfCreateManager()
@@ -78,7 +85,6 @@ class MainViewModel: NSObject, PDFCreateManagerDelegate {
         }
         return rsltPaths
     }
-    
     
     /// ディレクトリを除くファイルが存在するかチェックする
     ///
@@ -173,6 +179,18 @@ class MainViewModel: NSObject, PDFCreateManagerDelegate {
         }
         return reLoadIndex
     }
+    
+    /// deleteKeyイベント
+    func deleteEvent() {
+        for s in selectMngDat.enumerated() {
+            for i in (0..<cnvertList.count).reversed() {
+                if cnvertList[i].metaData.direPath == s.element.metaData.direPath {
+                    cnvertList.remove(at: i)
+                }
+            }
+        }
+        selectMngDat.removeAll()
+    }
 
     
     /// 変換スタートアクション
@@ -186,11 +204,10 @@ class MainViewModel: NSObject, PDFCreateManagerDelegate {
     }
     
     // MARK: PDFCreateManagerDelegate
-    
-    /// PDFCreateManagerDelegate
-    ///
-    /// - Parameter mngData: PDFメタデータ
-    func changDataState(mngData: PDFMetaData) {
-        
+    func changDataState(mngData: PdfMngData, exePercent: Int) {
+        delegate?.pdfMngChangDataState(mngData: mngData, exePercent: exePercent)
+    }
+    func pdfConvertEnd() {
+        delegate?.pdfConvertEnd()
     }
 }

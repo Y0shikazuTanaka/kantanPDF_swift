@@ -180,17 +180,11 @@ class MetaDataSubView: NSStackView, MetaDataTextSubViewDelegate, MetaDataSelectS
     
     // MARK: MetaDataTextSubViewDelegate
     func didEditText(text: String, identifer: String?, chkBoxSts: CheckBoxStatus) {
-        Swift.print(text)
-        Swift.print(identifer ?? "なし")
-        Swift.print(chkBoxSts)
         dataViewDelegate?.didEditText(text: text, identifer: identifer, chkBoxSts: chkBoxSts)
     }
     
     // MARK: MetaDataSelectSubViewDelegate
     func didEditRadioButton(radioBtnSts: RadioBtnStatus, identifer: String?, chkBoxSts: CheckBoxStatus) {
-        Swift.print(radioBtnSts)
-        Swift.print(identifer ?? "なし")
-        Swift.print(chkBoxSts)
         dataViewDelegate?.didEditRadioButton(radioBtnSts: radioBtnSts, identifer: identifer, chkBoxSts: chkBoxSts)
     }
 }

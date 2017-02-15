@@ -18,10 +18,11 @@ enum OutlineViewIdentifer: String {
     case Path
 }
 
-class MainViewController: NSViewController, NSOutlineViewDelegate, NSOutlineViewDataSource, DropContentViewDelegate, MetaDataSubViewDelegate {
+class MainViewController: NSViewController,
+FileOutlineViewDelegate, NSOutlineViewDataSource, MainViewModelDelegate, DropContentViewDelegate, MetaDataSubViewDelegate {
 
     @IBOutlet weak var metaDataView: MetaDataSubView!
-    @IBOutlet weak var fileListOutlineView: NSOutlineView!
+    @IBOutlet weak var fileListOutlineView: FileOutlineView!
     @IBOutlet weak var progressBar: NSProgressIndicator!
     @IBOutlet weak var startCancelBtn: NSButton!
     
@@ -31,6 +32,7 @@ class MainViewController: NSViewController, NSOutlineViewDelegate, NSOutlineView
         super.viewDidLoad()
         let view = self.view as! DropContentView
         view.delegate = self
+        model.delegate = self
         metaDataView.dataViewDelegate = self
     }
     
@@ -40,6 +42,7 @@ class MainViewController: NSViewController, NSOutlineViewDelegate, NSOutlineView
     @IBAction func startCancelAction(_ sender: NSButton) {
         switch sender.title {
         case ButtonLbl.Start.rawValue:
+            progressBar.doubleValue = 0
             sender.title = ButtonLbl.Cancel.rawValue
             model.startAction()
         default:
@@ -82,6 +85,28 @@ class MainViewController: NSViewController, NSOutlineViewDelegate, NSOutlineView
         fileListOutlineView.reloadData()
     }
     
+    /// MARK: MainViewModelDelegate
+    func pdfMngChangDataState(mngData: PdfMngData, exePercent: Int) {
+        switch mngData.exeState {
+        case .Unexecuted:
+            print("Unexecuted")
+        case .Executing:
+            print("Executing")
+        case .Executed:
+            print("Executed")
+            progressBar.doubleValue = Double(exePercent)
+        case .Cancel:
+            print("Cancel")
+        default:
+            print("Error")
+        }
+    }
+    
+    func pdfConvertEnd() {
+        startCancelBtn.title = ButtonLbl.Start.rawValue
+    }
+
+
     /// MARK: NSOutlineViewDataSource
     func outlineView(_ outlineView: NSOutlineView, numberOfChildrenOfItem item: Any?) -> Int {
         return model.cnvertList.count
@@ -90,7 +115,13 @@ class MainViewController: NSViewController, NSOutlineViewDelegate, NSOutlineView
         return false
     }
     
-    /// MARK: NSOutlineViewDelegate
+    /// MARK: FileOutlineViewDelegate
+    func deleteKyeDown() {
+        print("deleteKeyDown")
+        model.deleteEvent()
+        fileListOutlineView.reloadData()
+    }
+
     func selectionShouldChange(in outlineView: NSOutlineView) -> Bool {
         print("func selectionShouldChange(in outlineView: NSOutlineView) -> Bool")
         model.selectMngDat.removeAll()

@@ -1240,7 +1240,7 @@
                                     <rect key="frame" x="1" y="0.0" width="571" height="382"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <outlineView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" alternatingRowBackgroundColors="YES" autosaveColumns="NO" rowSizeStyle="automatic" headerView="XhX-wB-BDJ" viewBased="YES" outlineTableColumn="EDt-B2-zda" id="NOq-Nu-KPN">
+                                        <outlineView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" alternatingRowBackgroundColors="YES" autosaveColumns="NO" rowSizeStyle="automatic" headerView="XhX-wB-BDJ" viewBased="YES" outlineTableColumn="EDt-B2-zda" id="NOq-Nu-KPN" customClass="FileOutlineView" customModule="kantanPDF" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="571" height="359"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <size key="intercellSpacing" width="2" height="3"/>
@@ -1262,11 +1262,11 @@
                                                     <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                     <prototypeCellViews>
                                                         <tableCellView identifier="cell" id="fVJ-CV-Igp">
-                                                            <rect key="frame" x="1" y="1" width="128" height="17"/>
+                                                            <rect key="frame" x="1" y="1" width="129" height="17"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
                                                                 <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TZX-yk-cI8">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="128" height="17"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="129" height="17"/>
                                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                                                     <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="Table View Cell" id="gkT-KJ-mp3">
                                                                         <font key="font" metaFont="system"/>
@@ -1295,7 +1295,7 @@
                                                     <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                     <prototypeCellViews>
                                                         <tableCellView identifier="cell" id="bAD-gM-Njg">
-                                                            <rect key="frame" x="131.5" y="1" width="132" height="17"/>
+                                                            <rect key="frame" x="132" y="1" width="132" height="17"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
                                                                 <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5qp-Yz-wxa">
@@ -1314,7 +1314,7 @@
                                                         </tableCellView>
                                                     </prototypeCellViews>
                                                 </tableColumn>
-                                                <tableColumn identifier="Path" width="304.5" minWidth="10" maxWidth="3.4028234663852886e+38" id="7pw-jG-Lvt">
+                                                <tableColumn identifier="Path" width="303.5" minWidth="10" maxWidth="3.4028234663852886e+38" id="7pw-jG-Lvt">
                                                     <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="パス">
                                                         <font key="font" metaFont="smallSystem"/>
                                                         <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
@@ -1328,7 +1328,7 @@
                                                     <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                     <prototypeCellViews>
                                                         <tableCellView identifier="cell" id="zt4-FU-EDF">
-                                                            <rect key="frame" x="265.5" y="1" width="304" height="17"/>
+                                                            <rect key="frame" x="266" y="1" width="304" height="17"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
                                                                 <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fka-FP-Esz">

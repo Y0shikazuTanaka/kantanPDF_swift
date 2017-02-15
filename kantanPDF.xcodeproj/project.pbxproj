@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		E330643F1E34E29B00CA6939 /* AppConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = E330643E1E34E29B00CA6939 /* AppConst.swift */; };
 		E3485E9E1E41DFDC00555D49 /* PdfCreateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3485E9D1E41DFDC00555D49 /* PdfCreateManager.swift */; };
+		E3665EAC1E54983400E0D71C /* FileOutlineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3665EAB1E54983400E0D71C /* FileOutlineView.swift */; };
 		E37D51FC1E36075100512394 /* icon_128x128.png in Resources */ = {isa = PBXBuildFile; fileRef = E37D51F21E36075100512394 /* icon_128x128.png */; };
 		E37D51FD1E36075100512394 /* icon_128x128@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E37D51F31E36075100512394 /* icon_128x128@2x.png */; };
 		E37D51FE1E36075100512394 /* icon_16x16.png in Resources */ = {isa = PBXBuildFile; fileRef = E37D51F41E36075100512394 /* icon_16x16.png */; };
@@ -29,13 +30,13 @@
 		E3CA94271DF83843004501DD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3CA94251DF83843004501DD /* Main.storyboard */; };
 		E3CA94301DF839AD004501DD /* DropContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3CA942F1DF839AD004501DD /* DropContentView.swift */; };
 		E3CA94321DF8582E004501DD /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3CA94311DF8582E004501DD /* MainViewModel.swift */; };
-		E3CA94351DF97DFD004501DD /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E3CA94341DF97DFD004501DD /* background.jpg */; };
 		E3ECAD0F1E4B5BC4003714A2 /* MetaDataSubView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3ECAD0E1E4B5BC4003714A2 /* MetaDataSubView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		E330643E1E34E29B00CA6939 /* AppConst.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConst.swift; sourceTree = "<group>"; };
 		E3485E9D1E41DFDC00555D49 /* PdfCreateManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PdfCreateManager.swift; sourceTree = "<group>"; };
+		E3665EAB1E54983400E0D71C /* FileOutlineView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileOutlineView.swift; sourceTree = "<group>"; };
 		E37D51F21E36075100512394 /* icon_128x128.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_128x128.png; sourceTree = "<group>"; };
 		E37D51F31E36075100512394 /* icon_128x128@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_128x128@2x.png"; sourceTree = "<group>"; };
 		E37D51F41E36075100512394 /* icon_16x16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_16x16.png; sourceTree = "<group>"; };
@@ -58,7 +59,6 @@
 		E3CA94281DF83843004501DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E3CA942F1DF839AD004501DD /* DropContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropContentView.swift; sourceTree = "<group>"; };
 		E3CA94311DF8582E004501DD /* MainViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
-		E3CA94341DF97DFD004501DD /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background.jpg; sourceTree = "<group>"; };
 		E3ECAD0E1E4B5BC4003714A2 /* MetaDataSubView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetaDataSubView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -104,7 +104,6 @@
 			isa = PBXGroup;
 			children = (
 				E37D51F11E36075100512394 /* appIcon */,
-				E3CA94341DF97DFD004501DD /* background.jpg */,
 				E3CA941E1DF83843004501DD /* kantanPDF */,
 				E3CA941D1DF83843004501DD /* Products */,
 				E3A400661DF9AFF8002376CB /* Frameworks */,
@@ -124,6 +123,7 @@
 			children = (
 				E3CA941F1DF83843004501DD /* AppDelegate.swift */,
 				E330643E1E34E29B00CA6939 /* AppConst.swift */,
+				E3665EAB1E54983400E0D71C /* FileOutlineView.swift */,
 				E3485E9D1E41DFDC00555D49 /* PdfCreateManager.swift */,
 				E37D52061E360BAA00512394 /* PdfCreator.swift */,
 				E3CA94331DF85845004501DD /* MainView */,
@@ -217,7 +217,6 @@
 			files = (
 				E37D51FF1E36075100512394 /* icon_16x16@2x.png in Resources */,
 				E37D51FD1E36075100512394 /* icon_128x128@2x.png in Resources */,
-				E3CA94351DF97DFD004501DD /* background.jpg in Resources */,
 				E37D51FC1E36075100512394 /* icon_128x128.png in Resources */,
 				E37D51FE1E36075100512394 /* icon_16x16.png in Resources */,
 				E37D52001E36075100512394 /* icon_256x256.png in Resources */,
@@ -239,6 +238,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E3CA94301DF839AD004501DD /* DropContentView.swift in Sources */,
+				E3665EAC1E54983400E0D71C /* FileOutlineView.swift in Sources */,
 				E3CA94221DF83843004501DD /* MainViewController.swift in Sources */,
 				E3CA94201DF83843004501DD /* AppDelegate.swift in Sources */,
 				E37D52071E360BAA00512394 /* PdfCreator.swift in Sources */,
